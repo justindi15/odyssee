@@ -1,0 +1,95 @@
+
+body {
+    margin: 0px;
+    background: #FFF8EB;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section {
+      padding: 0em 2em;
+  }
+
+  .blob-section {
+      background: url(../images/Blob.svg) no-repeat;
+      background-size: cover;
+      height: 80vh;
+      padding: 0em 2em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+  }
+
+  .blob-section h1, .blob-section h2 {
+      color: white;
+  }
+
+  h1 {
+    font-size: 36px;
+    color: #055244;
+    font-family: minion-pro-caption,serif;
+    font-weight: 400;
+  }
+
+  h2 {
+    font-size: 24px;
+    color: #055244;
+    font-family: 'Courier New', Courier;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 18px;
+    color: #055244;
+    font-family: 'Courier New', Courier;
+    font-weight: normal; 
+  }
+
+  p {
+    font-family: minion-pro-caption,serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #055244;
+    font-size: 18px;
+    text-align: left;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .activity-icon {
+      display: block;
+      margin: 0px auto;
+  }
+
+  @media (min-width: 768px) {
+    body {
+      flex-direction: row;
+    }
+
+    .section {
+        min-width: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .blob-section {
+        background: url(../images/Blob.svg) no-repeat center;
+        background-size: 100% 130%;
+        min-width: 80%;
+        display: flex;
+        height: auto;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .activity-icon {
+        margin: 0px;
+    }
+  }
