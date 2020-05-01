@@ -107,13 +107,20 @@ h3 {
   font-weight: normal; 
 }
 
+.header-line {
+  overflow: hidden;
+  width: 100vw;
+}
+
 .header-line:after {
-  content: "";
+  content:"";
   display: inline-block;
-  vertical-align: middle;
-  border-bottom: 1px solid;
+  height: 0.5em;
+  vertical-align: bottom;
   width: 100%;
-  margin: 0 -55% 0 .5em;
+  margin-right: -100%;
+  margin-left: 10px;
+  border-top: 1px solid black;
 }
 
 p {
