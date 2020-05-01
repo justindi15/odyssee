@@ -29,6 +29,10 @@ body {
     margin-top: 8em;
 }
 
+.section-lined {
+  overflow: hidden;
+}
+
 .ending-note-section {
   margin: 8em 0em;
 }
@@ -51,6 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 #footer {
