@@ -1,0 +1,26 @@
+{
+  "name": "odyssee",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gallery.html",
+  "scripts": {
+    "dev": "parcel gallery.html",
+    "build": "parcel build gallery.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justindi15/odyssee.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justindi15/odyssee/issues"
+  },
+  "homepage": "https://github.com/justindi15/odyssee#readme",
+  "dependencies": {
+    "@oberon-amsterdam/horizontal": "^1.0.2"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -7,18 +8,19 @@
   <link rel="stylesheet" type="text/css" href="styles/gallery.css" media="all" />
   <link rel="stylesheet" href="https://use.typekit.net/qep5qwj.css">
   <link rel="icon" type="image/png" href="images/icon.png">
+  <script src="index.js"></script>
 </head>
 
 <body>
 
-  <!-- <div class="header">
+  <div class="header">
     <ul>
-      <li style="float:right"><a href="about.html">About</a></li>
+      <li style="float:right"><a href="about.html">ABOUT</a></li>
     </ul>
-  </div> -->
+  </div>
 
-  <div class="section">
-    <h1>Bringing you a vision wider than yesterday</h1>
+  <div class="section" id="start">
+    <h1>Bringing you a vision<br>wider than yesterday</h1>
   </div>
 
   <div class="section">
@@ -37,7 +39,7 @@
   </div>
 
   <div class="section">
-    <h1>Activity</h1>
+    <h1 class="header-line">Activity</h1>
     <h3>We categorized life's activities into two groups: Inflow and Bi-directional.</h3>
   </div>
 
@@ -171,7 +173,7 @@
   </div>
 
   <div class="section">
-    <h1>Time</h1>
+    <h1 class="header-line">Time</h1>
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
   </div>
 
@@ -184,7 +186,7 @@
   </div>
 
   <div class="section">
-    <h1>Mood</h1>
+    <h1 class="header-line">Mood</h1>
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
   </div>
 
@@ -197,7 +199,7 @@
   </div>
 
   <div class="section">
-    <h1>Attitude</h1>
+    <h1 class="header-line">Attitude</h1>
     <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
   </div>
 
@@ -209,21 +211,39 @@
     <img src="./images/Dataviz - Mockup.png" width="100%">
   </div>
 
-  <div class="section">
-    <h2>ENDING NOTE</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien augue tempus, hendrerit massa gravida euismod ut. Eu orci faucibus cursus tincidunt velit ut.</p>
+  <div class="ending-note-section">
+    <img src="./images/Squiggly-1.svg" width="100%">
+      <h2 class="ending-note">ENDING NOTE</h2>
+      <p class="ending-note">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien augue tempus, hendrerit massa gravida euismod ut. Eu orci faucibus cursus tincidunt velit ut.</p>
+    <img src="./images/Squiggly-2.svg" width="100%">
   </div>
 
   <div class="blob-section" id="footer">
+    <div class="section">
       <h1>The Team</h1>
+      <div class="grid-container">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+        <img class="team-member" src="./images/Team-member.svg">
+      </div>
+    </div>
 
+    <div class="section">
       <h1>Discover</h1>
-      <p>Find out more about shiro.community</p>
+      <p>Find out more about<br>shiro.community</p>
       <p>Drop us a message</p>
+    </div>
 
+    <div class="section">
       <p>We take your privacy seriously, and will only use your data for the creation of visualizations as well as your personal information to contact you if needed. We respect your trust and protect your privacy, and therefore will never sell or share this data with third parties. The visualizations we will create will not reveal your identity.</p>
+    </div>
   </div>
-
 </body>
 
 </html>
