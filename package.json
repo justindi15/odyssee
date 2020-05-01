@@ -5,7 +5,7 @@
   "main": "gallery.html",
   "scripts": {
     "dev": "parcel gallery.html",
-    "build": "parcel build gallery.html"
+    "build": "parcel build gallery.html --out-dir docs --public-url ./"
   },
   "repository": {
     "type": "git",
