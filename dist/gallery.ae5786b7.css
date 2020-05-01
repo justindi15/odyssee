@@ -43,7 +43,7 @@ body {
 }
 
 .blob-section {
-    background: url(../images/Blob.svg) no-repeat center top;
+    background: url(/Blob.2e20a99b.svg) no-repeat center top;
     background-size: contain;
     height: 80vh;
     padding: 0em 2em;
@@ -228,7 +228,7 @@ ul {
   }
 
   .blob-section {
-      background: url(../images/Blob.svg) no-repeat left;
+      background: url(/Blob.2e20a99b.svg) no-repeat left;
       min-width: auto;
       display: flex;
       height: 100vh;
@@ -286,3 +286,5 @@ ul {
     padding-right: 6vw;
   }
 }
+
+/*# sourceMappingURL=/gallery.ae5786b7.css.map */
