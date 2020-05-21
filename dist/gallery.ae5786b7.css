@@ -29,28 +29,6 @@ body {
     margin-top: 8em;
 }
 
-#chapters-blob-mobile {
-  display: block;
-  margin-top: 8em;
-  position: relative;
-}
-
-#chapters-blob-child-mobile {
-  position: absolute;
-  top: 50%;
-  padding: 0em 2em;
-  transform: translate(0%, -50%);
-  color: white;
-}
-
-#chapters-blob-child-mobile h1, #chapters-blob-child-mobile h2 {
-  color: white;
-}
-
-#chapters-blob-desktop {
-  display: none;
-}
-
 .section-lined {
   overflow: hidden;
 }
@@ -173,6 +151,18 @@ ul {
   display: none;
 }
 
+.line {
+  display: none;
+}
+
+#chapters-blob{
+  background-color: #055244;
+}
+
+#chapters-blob h1, #chapters-blob h2{
+  color: white;
+}
+
 @media (min-width: 768px) {
   body {
     flex-direction: row;
@@ -221,27 +211,12 @@ ul {
   .section-lined h1 {
     margin-block-end: 0px;
   }
-  
-  #chapters-blob-mobile {
-    display: none;
-  }
 
-  #chapters-blob-desktop {
-    display: block;
-    position: relative;
-    margin: 0em 2em;
-  }
-  
-  #chapters-blob-child-desktop {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 0em 2em;
-    transform: translate(-50%, -50%);
-  }
-  
-  #chapters-blob-child-desktop h1, #chapters-blob-child-desktop h2 {
-    color: white;
+  #chapters-blob{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
   }
 
   .ending-note-section{
@@ -300,6 +275,7 @@ ul {
 
   .activity-type-icon {
       margin: 0px;
+      width: 150px;
   }
 
   .grid-container {
@@ -314,6 +290,66 @@ ul {
 
   .bidirectional-item {
     grid-row: 2;
+  }
+
+  .condensed-text {
+    width: 450px;
+  }
+
+  .line {
+    display: block;
+    height: 100vh;
+  }
+
+  /* POSITIONED ELEMENTS */
+
+  #one{
+    position: relative;
+    top: 15%;
+    left: 10%;
+  }
+
+  #two{
+    justify-content: flex-end;
+  }
+
+  #two h3{
+    width: 700px;
+    margin-bottom: 10vh;
+  }
+
+  #three {
+    min-width: auto;
+    justify-content: center;
+  }
+
+  #four{
+    min-width: auto;
+    justify-content: flex-end;
+  }
+
+  #four p{
+    margin-bottom: 8vh;
+  }
+
+  #six {
+    justify-content: flex-end;
+  }
+
+  #seven {
+    justify-content: center;
+  }
+
+  #eight {
+    justify-content: flex-end;
+  }
+
+  #ten {
+    justify-content: flex-end;
+  }
+
+  #twelve {
+    justify-content: center;
   }
 }
 
