@@ -2256,13 +2256,13 @@ handleScroll();
 window.addEventListener("resize", handleScroll);
 
 function handleScroll() {
-  if (window.innerWidth > 768) {
+  if (window.innerWidth > 768 && !scroll) {
     scroll = new _horizontal.default();
   }
 
   if (scroll && window.innerWidth <= 768) {
     scroll.destroy();
-    window.location.reload();
+    scroll = null;
   }
 }
 },{"@oberon-amsterdam/horizontal":"node_modules/@oberon-amsterdam/horizontal/index.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -2293,7 +2293,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57230" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57852" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

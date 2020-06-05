@@ -5,12 +5,12 @@ handleScroll();
 window.addEventListener("resize", handleScroll);
 
 function handleScroll(){
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 768 && !scroll) {
         scroll = new HorizontalScroll();
     }
 
     if(scroll && window.innerWidth <= 768){
         scroll.destroy();
-        window.location.reload();
+        scroll = null;
     }
 }

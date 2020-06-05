@@ -1,9 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="847px" height="1024px" viewBox="0 0 847 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
-    <title>Horizontal Scroll</title>
-    <desc>Created with Sketch.</desc>
-    <g id="Horizontal-Scroll" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <path d="M132.497661,456 C114.336859,304.324358 195.213126,206.681069 375.126463,163.070135 C555.039799,119.459202 712.330978,49.4358231 847,-47" id="Line-19" stroke="#055244" stroke-width="3"></path>
-    </g>
+<svg width="641" height="1024" viewBox="0 0 641 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<path d="M-22.5023 456C-40.6631 304.324 40.2131 206.681 220.126 163.07C400.04 119.459 557.331 49.4358 692 -47" stroke="#055244" stroke-width="3" stroke-linecap="round"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="641" height="1024" fill="white"/>
+</clipPath>
+</defs>
 </svg>
