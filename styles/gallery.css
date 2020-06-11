@@ -392,4 +392,29 @@ ul {
   #end {
     justify-content: center;
   }
+
+  #activity-1 {
+    background: url('../images/lines/activity 1.svg') no-repeat center;
+    width: 100%;
+    flex: 2;
+  }
+
+  #activity-2 {
+    background: url('../images/lines/activity 2.svg') no-repeat center;
+    width: 100%;
+    flex: 1;
+  }
+
+  #time-1 {
+    background: url('../images/lines/time 1.svg') no-repeat center;
+    width: 100%;
+    flex: 2;
+  }
+
+  #time-2 {
+    background: url('../images/lines/time 2.svg') no-repeat center;
+    width: 100%;
+    flex: 1;
+  }
+
 }
