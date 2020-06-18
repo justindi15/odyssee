@@ -4153,6 +4153,14 @@ var scrollBehaviour = [{
   startPct: 7,
   endPct: 9
 }, {
+  id: 'path-activity-1',
+  startPct: 18,
+  endPct: 20
+}, {
+  id: 'path-activity-2',
+  startPct: 17,
+  endPct: 18
+}, {
   id: 'path-3',
   startPct: 22,
   endPct: 24
@@ -4173,6 +4181,14 @@ var scrollBehaviour = [{
   startPct: 36,
   endPct: 38
 }, {
+  id: 'path-time-1',
+  startPct: 41,
+  endPct: 45
+}, {
+  id: 'path-time-2',
+  startPct: 45,
+  endPct: 46
+}, {
   id: 'path-8',
   startPct: 47,
   endPct: 48
@@ -4180,6 +4196,14 @@ var scrollBehaviour = [{
   id: 'path-9',
   startPct: 50,
   endPct: 53
+}, {
+  id: 'path-mood-1',
+  startPct: 59,
+  endPct: 60
+}, {
+  id: 'path-mood-2',
+  startPct: 56,
+  endPct: 59
 }, {
   id: 'path-10',
   startPct: 60,
@@ -4189,13 +4213,33 @@ var scrollBehaviour = [{
   startPct: 64,
   endPct: 68
 }, {
+  id: 'path-12',
+  startPct: 70,
+  endPct: 72
+}, {
+  id: 'path-attitude-1',
+  startPct: 72,
+  endPct: 73
+}, {
+  id: 'path-attitude-2',
+  startPct: 73,
+  endPct: 76
+}, {
   id: 'path-13',
-  startPct: 80,
-  endPct: 83
+  startPct: 81,
+  endPct: 84
 }, {
   id: 'path-14',
   startPct: 87,
   endPct: 88
+}, {
+  id: 'path-ending-note-1',
+  startPct: 88,
+  endPct: 91
+}, {
+  id: 'path-ending-note-2',
+  startPct: 93,
+  endPct: 95
 }];
 window.addEventListener('load', function (event) {
   scrollEventHandler();
@@ -4250,7 +4294,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59645" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

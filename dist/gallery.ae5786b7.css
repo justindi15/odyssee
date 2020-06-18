@@ -401,25 +401,31 @@ text-decoration: white line-through;
   }
 
   #activity-1 {
-    background: url('/activity 1.1696845a.svg') no-repeat center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     flex: 2;
+    overflow: hidden;
   }
 
   #activity-2 {
-    background: url('/activity 2.01696530.svg') no-repeat center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     flex: 1;
   }
 
   #time-1 {
-    background: url('/time 1.b5a74444.svg') no-repeat center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     flex: 2;
+    overflow: hidden;
   }
 
   #time-2 {
-    background: url('/time 2.03d07f71.svg') no-repeat center;
+    display: flex;
+    justify-content: center;
     width: 100%;
     flex: 1;
   }
