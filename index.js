@@ -41,10 +41,10 @@ const scrollBehaviour = [
     {id: 'path-14', startPct: 87, endPct: 88},
  ];
 
- document.addEventListener('DOMContentLoaded', (event) => {
+ window.addEventListener('load', (event) => {
     scrollEventHandler();
     window.addEventListener("scroll", scrollEventHandler)
-  })
+})
 
 
 function scrollEventHandler()
