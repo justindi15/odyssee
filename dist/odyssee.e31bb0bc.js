@@ -4144,17 +4144,6 @@ function handleScroll() {
 
 (0, _scrollreveal.default)().clean(document.querySelectorAll('#chapters-blob h1,#chapters-blob h2,#chapters-blob h3,#chapters-blob p'));
 (0, _scrollreveal.default)().clean(document.querySelectorAll('.footer h1,.footer h2,.footer h3,.footer p'));
-
-function initializeDashOffsets() {
-  for (var i = 0; i < scrollBehaviour.length; i++) {
-    var data = scrollBehaviour[i];
-    var elem = document.querySelector("#".concat(data.id));
-    var dashLen = elem.getTotalLength();
-    elem.style.strokeDasharray = dashLen + ' ' + dashLen;
-    elem.style.strokeDashoffset = dashLen;
-  }
-}
-
 var scrollBehaviour = [{
   id: 'path-1',
   startPct: 1,
@@ -4208,8 +4197,10 @@ var scrollBehaviour = [{
   startPct: 87,
   endPct: 88
 }];
-scrollEventHandler();
-window.addEventListener("scroll", scrollEventHandler);
+document.addEventListener('DOMContentLoaded', function (event) {
+  scrollEventHandler();
+  window.addEventListener("scroll", scrollEventHandler);
+});
 
 function scrollEventHandler() {
   // Calculate how far down the page the user is 
@@ -4259,7 +4250,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55927" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

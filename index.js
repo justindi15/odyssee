@@ -25,17 +25,7 @@ ScrollReveal().reveal(document.querySelectorAll('h1, h2, h3, p'), { easing: 'eas
 ScrollReveal().clean(document.querySelectorAll('#chapters-blob h1,#chapters-blob h2,#chapters-blob h3,#chapters-blob p'))
 ScrollReveal().clean(document.querySelectorAll('.footer h1,.footer h2,.footer h3,.footer p'))
 
-function initializeDashOffsets() {
-    for (let i=0; i<scrollBehaviour.length; i++){
-        let data = scrollBehaviour[i];
-        let elem = document.querySelector(`#${data.id}`);
-        let dashLen = elem.getTotalLength();
-        elem.style.strokeDasharray = dashLen + ' ' + dashLen;
-        elem.style.strokeDashoffset = dashLen;
-    }
-}
-
-var scrollBehaviour = [
+const scrollBehaviour = [
     {id: 'path-1', startPct: 1, endPct: 8},
     {id: 'path-2', startPct: 7, endPct: 9},
     {id: 'path-3', startPct: 22, endPct: 24},
@@ -51,9 +41,10 @@ var scrollBehaviour = [
     {id: 'path-14', startPct: 87, endPct: 88},
  ];
 
-
-scrollEventHandler();
-window.addEventListener("scroll", scrollEventHandler)
+ document.addEventListener('DOMContentLoaded', (event) => {
+    scrollEventHandler();
+    window.addEventListener("scroll", scrollEventHandler)
+  })
 
 
 function scrollEventHandler()
