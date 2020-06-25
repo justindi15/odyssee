@@ -19,7 +19,8 @@
   "homepage": "https://github.com/justindi15/odyssee#readme",
   "dependencies": {
     "@oberon-amsterdam/horizontal": "^1.0.2",
-    "scrollreveal": "^4.0.6"
+    "scrollreveal": "^4.0.6",
+    "sweet-scroll": "^4.0.0"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.4"

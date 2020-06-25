@@ -324,13 +324,13 @@ text-decoration: white line-through;
     left: 10%;
   }
 
-  #two{
+  #activity{
     align-items: center;
     margin-left: 10em;
     margin-right: 25em;
   }
 
-  #two-child {
+  #activity-text {
     width: 700px;
   }
 

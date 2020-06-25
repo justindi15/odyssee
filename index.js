@@ -1,5 +1,6 @@
 import HorizontalScroll from '@oberon-amsterdam/horizontal';
 import ScrollReveal from 'scrollreveal';
+import SweetScroll from 'sweet-scroll'
 
 
 //Horizontal Scrolling
@@ -52,7 +53,7 @@ const scrollBehaviour = [
     {id: 'path-ending-note-2', startPct: 93, endPct: 95},
  ];
 
- window.addEventListener('load', (event) => {
+ window.addEventListener("DOMContentLoaded", (event) => {
     scrollEventHandler();
     window.addEventListener("scroll", scrollEventHandler)
 })
@@ -60,10 +61,9 @@ const scrollBehaviour = [
 
 function scrollEventHandler()
 {
- // Calculate how far down the page the user is 
+ // Calculate how far right the page the user is 
  var percentOfScroll = (document.documentElement.scrollLeft + document.body.scrollLeft) / (document.documentElement.scrollWidth - document.documentElement.clientWidth) * 100;
-    console.log(percentOfScroll);
- // For each lement that is getting drawn...
+ // For each element that is getting drawn...
  for (var i=0; i<scrollBehaviour.length; i++)
  {
    var data = scrollBehaviour[i];
@@ -84,3 +84,18 @@ function scrollEventHandler()
    elem.setAttribute("stroke-dashoffset", dashOffset);
  }
 }
+
+/*
+    smooth scrolling links in chapters blob
+*/
+
+window.addEventListener(
+    'DOMContentLoaded',
+    () => {
+      const scroller = new SweetScroll({
+        vertical: false,
+        horizontal: true,
+        easing: 'easeInOutCubic',
+      });
+    }
+);
