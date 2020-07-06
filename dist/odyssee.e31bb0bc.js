@@ -4850,12 +4850,12 @@ var scrollBehaviour = [{
   endPct: 9
 }, {
   id: 'path-activity-1',
-  startPct: 18,
-  endPct: 20
+  startPct: 19,
+  endPct: 21
 }, {
   id: 'path-activity-2',
-  startPct: 17,
-  endPct: 18
+  startPct: 18,
+  endPct: 19
 }, {
   id: 'path-3',
   startPct: 22,
@@ -4914,12 +4914,12 @@ var scrollBehaviour = [{
   endPct: 72
 }, {
   id: 'path-attitude-1',
-  startPct: 72,
-  endPct: 73
+  startPct: 73,
+  endPct: 74
 }, {
   id: 'path-attitude-2',
-  startPct: 73,
-  endPct: 76
+  startPct: 74,
+  endPct: 78
 }, {
   id: 'path-13',
   startPct: 81,
@@ -5001,7 +5001,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64364" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53439" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -1,3 +1,7 @@
+html {
+  cursor: url(../images/cursors/pointer.svg), auto;
+}
+
 body {
     margin: 0px;
     background: #FFF8EB;
@@ -8,6 +12,10 @@ body {
 .header {
   border-bottom: 1px solid #DBD5CA;
   padding: 0 2em;
+}
+
+a:hover{
+  cursor: url(../images/cursors/hand.svg), auto;
 }
 
 .header a{
@@ -99,7 +107,7 @@ ul {
 .grid-container {
     margin: 5em auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .inflow-item, .bidirectional-item {
@@ -165,6 +173,11 @@ ul {
 
 #chapters-blob a:hover{
 text-decoration: white line-through;
+}
+
+.team-member {
+  width: 250px;
+  height: auto;
 }
 
 @media (min-width: 768px) {
