@@ -107,7 +107,7 @@ ul {
 .grid-container {
     margin: 5em auto;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .inflow-item, .bidirectional-item {
@@ -144,6 +144,8 @@ ul {
 
 .footer .grid-container {
   row-gap: 1em;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: none;
 }
 
 .blob-mobile {
@@ -176,8 +178,16 @@ text-decoration: white line-through;
 }
 
 .team-member {
-  width: 250px;
+  width: 150px;
   height: auto;
+}
+
+#time-anchor {
+  display: none;
+}
+
+#activity-display, #activity-examples {
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -260,6 +270,10 @@ text-decoration: white line-through;
     justify-content: center;
   }
 
+  .activity-label {
+    visibility: hidden;
+  }
+
   .disclaimer-note {
     font-size: small;
     font-style: italic;
@@ -271,7 +285,13 @@ text-decoration: white line-through;
   }
 
   .footer .grid-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 0em 4em;
+  }
+
+  .team-member {
+    width: 200px;
+    height: auto;
   }
 
   .footer p {
@@ -290,6 +310,7 @@ text-decoration: white line-through;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
+    min-width: auto;
   }
 
   .activity-type-icon {
@@ -299,8 +320,9 @@ text-decoration: white line-through;
 
   .grid-container {
     display: grid;
-    gap: 2em;
+    column-gap: 2em;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin-bottom: 1em;
   }
 
   .inflow-item {
@@ -327,6 +349,22 @@ text-decoration: white line-through;
 
   #desktop-bottom-margin {
     margin-bottom: 150px;
+  }
+
+  #activity-display {
+    display: inline-block;
+    min-height: 2.50em;
+    line-height: 1.25;
+    color: #484848;
+    font-family: 'Courier New', Courier;
+    font-size: 24px;
+  }
+
+  #activity-examples {
+    display: inline-block;
+    color: #484848;
+    font-family: 'Courier New', Courier;
+    font-size: 18px;
   }
 
   /* POSITIONED ELEMENTS */
@@ -388,6 +426,7 @@ text-decoration: white line-through;
 
   #time-div {
     width: 600px;
+    padding-right: 100px;
   }
 
   #mood {

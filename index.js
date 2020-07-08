@@ -99,3 +99,23 @@ window.addEventListener(
       });
     }
 );
+
+
+/*
+    activity icons hover labels
+*/
+
+function displayActivityLabel(label){
+  document.getElementById('activity-display').innerHTML = label;
+}
+
+[...document.querySelectorAll('.inflow-item'), ...document.querySelectorAll('.bidirectional-item')].forEach(item => {
+  item.addEventListener('mouseover', function(event){
+    displayActivityLabel(item.querySelector('span').innerHTML);
+  })
+
+  item.addEventListener('mouseout', function(event){
+    console.log('mouse out');
+    displayActivityLabel('');
+  })
+})
