@@ -329,6 +329,25 @@ text-decoration: white line-through;
     grid-row: 1;
   }
 
+  .imgHover {
+    position: relative;
+    display: inline-block;
+  }
+
+  .imgHover:hover::before {
+    content: '';
+    display: block;
+    background-image: url(/Oval.0a220762.svg); /* your background */
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130px; /* image width */
+    height: 130px; /* image height */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
   .bidirectional-item {
     grid-row: 2;
   }
