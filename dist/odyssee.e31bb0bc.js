@@ -5007,6 +5007,28 @@ function displayExamples(examples) {
     displayExamples('');
   });
 });
+/*
+  Display Sticky scroll navbar after scrolling past Activity Start
+*/
+// When the user scrolls the page, execute myFunction
+
+window.onscroll = function () {
+  handleStickyNavDisplay();
+}; // Get the navbar
+
+
+var stickyNav = document.getElementById("sticky-nav"); // Get Activity Section Offset
+
+var activity = document.getElementById("activity");
+var activityOffset = activity.offsetLeft; // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+
+function handleStickyNavDisplay() {
+  if (window.pageXOffset >= activityOffset) {
+    stickyNav.style.visibility = "visible";
+  } else {
+    stickyNav.style.visibility = "hidden";
+  }
+}
 },{"@oberon-amsterdam/horizontal":"node_modules/@oberon-amsterdam/horizontal/index.js","scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js","sweet-scroll":"node_modules/sweet-scroll/sweet-scroll.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5035,7 +5057,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54505" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52505" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

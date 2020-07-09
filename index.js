@@ -126,3 +126,28 @@ function displayExamples(examples){
 })
 
 
+/*
+  Display Sticky scroll navbar after scrolling past Activity Start
+*/
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {handleStickyNavDisplay()};
+
+// Get the navbar
+var stickyNav = document.getElementById("sticky-nav");
+
+// Get Activity Section Offset
+
+var activity = document.getElementById("activity");
+var activityOffset = activity.offsetLeft;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function handleStickyNavDisplay() {
+  if (window.pageXOffset >= activityOffset) {
+    stickyNav.style.visibility = "visible"
+  } else {
+    stickyNav.style.visibility = "hidden"
+  }
+}
+
+
