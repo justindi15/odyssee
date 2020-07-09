@@ -109,13 +109,20 @@ function displayActivityLabel(label){
   document.getElementById('activity-display').innerHTML = label;
 }
 
+function displayExamples(examples){
+  document.getElementById('activity-examples').innerHTML = examples ? `E.g., ${examples}` : ''
+}
+
 [...document.querySelectorAll('.inflow-item'), ...document.querySelectorAll('.bidirectional-item')].forEach(item => {
   item.addEventListener('mouseover', function(event){
     displayActivityLabel(item.querySelector('span').innerHTML);
+    displayExamples(item.dataset.examples);
   })
 
   item.addEventListener('mouseout', function(event){
-    console.log('mouse out');
     displayActivityLabel('');
+    displayExamples('')
   })
 })
+
+

@@ -4993,13 +4993,18 @@ function displayActivityLabel(label) {
   document.getElementById('activity-display').innerHTML = label;
 }
 
+function displayExamples(examples) {
+  document.getElementById('activity-examples').innerHTML = examples ? "E.g., ".concat(examples) : '';
+}
+
 [].concat(_toConsumableArray(document.querySelectorAll('.inflow-item')), _toConsumableArray(document.querySelectorAll('.bidirectional-item'))).forEach(function (item) {
   item.addEventListener('mouseover', function (event) {
     displayActivityLabel(item.querySelector('span').innerHTML);
+    displayExamples(item.dataset.examples);
   });
   item.addEventListener('mouseout', function (event) {
-    console.log('mouse out');
     displayActivityLabel('');
+    displayExamples('');
   });
 });
 },{"@oberon-amsterdam/horizontal":"node_modules/@oberon-amsterdam/horizontal/index.js","scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js","sweet-scroll":"node_modules/sweet-scroll/sweet-scroll.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
@@ -5030,7 +5035,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63754" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54505" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

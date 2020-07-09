@@ -384,6 +384,8 @@ text-decoration: white line-through;
     color: #484848;
     font-family: 'Courier New', Courier;
     font-size: 18px;
+    min-height: 2em;
+    line-height: 1;
   }
 
   /* POSITIONED ELEMENTS */
