@@ -130,16 +130,22 @@ function displayExamples(examples){
   Display Sticky scroll navbar after scrolling past Activity Start
 */
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {handleStickyNavDisplay()};
-
 // Get the navbar
 var stickyNav = document.getElementById("sticky-nav");
 
 // Get Activity Section Offset
 
-var activity = document.getElementById("activity");
+var activity = document.getElementById("activity-text");
 var activityOffset = activity.offsetLeft;
+
+var time = document.getElementById("time-anchor");
+var timeOffset = time.offsetLeft;
+
+var mood = document.getElementById("mood-div");
+var moodOffset = mood.offsetLeft;
+
+var attitude = document.getElementById("attitude-div");
+var attitudeOffset = attitude.offsetLeft;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function handleStickyNavDisplay() {
@@ -149,5 +155,53 @@ function handleStickyNavDisplay() {
     stickyNav.style.visibility = "hidden"
   }
 }
+
+//reset sticky nav elements
+function resetElements(){
+  var navdots = document.querySelectorAll('.sticky-nav-dot');
+  for(var i=0; i<navdots.length; i++){
+      navdots[i].style.backgroundColor = "lightgray";
+  }
+
+  var navlabels = document.querySelectorAll('.sticky-nav-label');
+  for(var i=0; i<navlabels.length; i++){
+      navlabels[i].style.visibility = "hidden"
+  }
+}
+
+//highlight the current section in the sticky navbar by making dot green and showing section label
+function highlightCurrentSection() {
+  resetElements();
+
+  let halfScreenWidth = screen.width / 2
+  let offset = window.pageXOffset + halfScreenWidth
+
+  if(window.pageXOffset >= activityOffset && offset < timeOffset){
+    document.getElementById("activity-dot").style.backgroundColor = "#484848"
+    document.getElementById("sticky-nav-activity-label").style.visibility = "visible"
+  }else{
+    if(offset >= timeOffset && offset < moodOffset){
+      document.getElementById("time-dot").style.backgroundColor = "#484848"
+      document.getElementById("sticky-nav-time-label").style.visibility = "visible"
+    }else{
+      if(offset >= moodOffset && offset < attitudeOffset){
+        document.getElementById("mood-dot").style.backgroundColor = "#484848"
+        document.getElementById("sticky-nav-mood-label").style.visibility = "visible"
+      }else{
+        if(offset >= attitudeOffset){
+          document.getElementById("attitude-dot").style.backgroundColor = "#484848"
+          document.getElementById("sticky-nav-attitude-label").style.visibility = "visible"
+        }
+      }
+    }
+  }
+}
+
+// When the user scrolls the page, execute sticky nav functions
+window.onscroll = function() {
+  handleStickyNavDisplay();
+  highlightCurrentSection();
+};
+
 
 

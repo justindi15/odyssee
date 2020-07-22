@@ -5010,17 +5010,18 @@ function displayExamples(examples) {
 /*
   Display Sticky scroll navbar after scrolling past Activity Start
 */
-// When the user scrolls the page, execute myFunction
-
-window.onscroll = function () {
-  handleStickyNavDisplay();
-}; // Get the navbar
-
+// Get the navbar
 
 var stickyNav = document.getElementById("sticky-nav"); // Get Activity Section Offset
 
-var activity = document.getElementById("activity");
-var activityOffset = activity.offsetLeft; // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+var activity = document.getElementById("activity-text");
+var activityOffset = activity.offsetLeft;
+var time = document.getElementById("time-anchor");
+var timeOffset = time.offsetLeft;
+var mood = document.getElementById("mood-div");
+var moodOffset = mood.offsetLeft;
+var attitude = document.getElementById("attitude-div");
+var attitudeOffset = attitude.offsetLeft; // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 
 function handleStickyNavDisplay() {
   if (window.pageXOffset >= activityOffset) {
@@ -5028,7 +5029,55 @@ function handleStickyNavDisplay() {
   } else {
     stickyNav.style.visibility = "hidden";
   }
-}
+} //reset sticky nav elements
+
+
+function resetElements() {
+  var navdots = document.querySelectorAll('.sticky-nav-dot');
+
+  for (var i = 0; i < navdots.length; i++) {
+    navdots[i].style.backgroundColor = "lightgray";
+  }
+
+  var navlabels = document.querySelectorAll('.sticky-nav-label');
+
+  for (var i = 0; i < navlabels.length; i++) {
+    navlabels[i].style.visibility = "hidden";
+  }
+} //highlight the current section in the sticky navbar by making dot green and showing section label
+
+
+function highlightCurrentSection() {
+  resetElements();
+  var halfScreenWidth = screen.width / 2;
+  var offset = window.pageXOffset + halfScreenWidth;
+
+  if (window.pageXOffset >= activityOffset && offset < timeOffset) {
+    document.getElementById("activity-dot").style.backgroundColor = "#484848";
+    document.getElementById("sticky-nav-activity-label").style.visibility = "visible";
+  } else {
+    if (offset >= timeOffset && offset < moodOffset) {
+      document.getElementById("time-dot").style.backgroundColor = "#484848";
+      document.getElementById("sticky-nav-time-label").style.visibility = "visible";
+    } else {
+      if (offset >= moodOffset && offset < attitudeOffset) {
+        document.getElementById("mood-dot").style.backgroundColor = "#484848";
+        document.getElementById("sticky-nav-mood-label").style.visibility = "visible";
+      } else {
+        if (offset >= attitudeOffset) {
+          document.getElementById("attitude-dot").style.backgroundColor = "#484848";
+          document.getElementById("sticky-nav-attitude-label").style.visibility = "visible";
+        }
+      }
+    }
+  }
+} // When the user scrolls the page, execute sticky nav functions
+
+
+window.onscroll = function () {
+  handleStickyNavDisplay();
+  highlightCurrentSection();
+};
 },{"@oberon-amsterdam/horizontal":"node_modules/@oberon-amsterdam/horizontal/index.js","scrollreveal":"node_modules/scrollreveal/dist/scrollreveal.es.js","sweet-scroll":"node_modules/sweet-scroll/sweet-scroll.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -5057,7 +5106,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52505" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49994" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -218,8 +218,25 @@ text-decoration: white line-through;
     z-index: 999;
   }
 
-  #sticky-nav a {
+  .sticky-nav-element {
     margin: 1em;
+    position: relative;
+  }
+
+  #sticky-nav-strike-through{
+    border: lightgray;
+    border-width: 0.5px;
+    border-style: solid;
+    width: 9em;
+    position: absolute;
+  }
+
+  .sticky-nav-label {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -180%;
+    font-family: 'Courier New', Courier, monospace;
   }
 
   .sticky-nav-dot {
@@ -233,8 +250,9 @@ text-decoration: white line-through;
   .sticky-nav-dot:hover::before{
     content: '';
     display: block;
-    border: black solid 1px;
-    border-radius: 100%;
+    background-image: url(/Oval.0a220762.svg); /* your background */
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 2em;
     height: 2em;
     position: absolute;
