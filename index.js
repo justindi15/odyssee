@@ -28,7 +28,8 @@ ScrollReveal().clean(document.querySelectorAll('.footer h1,.footer h2,.footer h3
 
 const scrollBehaviour = [
     {id: 'path-1', startPct: 1, endPct: 8},
-    {id: 'path-2', startPct: 7, endPct: 9},
+    {id: 'path-2a', startPct: 4, endPct: 8},
+    {id: 'path-2b', startPct: 13, endPct: 19},
     {id: 'path-activity-1', startPct: 19, endPct: 21},
     {id: 'path-activity-2', startPct: 18, endPct: 19},
     {id: 'path-3', startPct: 22, endPct: 24},
@@ -71,7 +72,7 @@ function scrollEventHandler()
 
    // Get the length of this elements path
    var dashLen = elem.getTotalLength();
-
+    console.log(percentOfScroll)
    // Calculate where the current scroll position falls relative to our path
    var fractionThroughThisElem = (percentOfScroll - data.startPct) / (data.endPct - data.startPct);
    // Clamp the fraction value to within this path (0 .. 1)

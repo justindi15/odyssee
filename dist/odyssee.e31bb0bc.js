@@ -4857,9 +4857,13 @@ var scrollBehaviour = [{
   startPct: 1,
   endPct: 8
 }, {
-  id: 'path-2',
-  startPct: 7,
-  endPct: 9
+  id: 'path-2a',
+  startPct: 4,
+  endPct: 8
+}, {
+  id: 'path-2b',
+  startPct: 13,
+  endPct: 19
 }, {
   id: 'path-activity-1',
   startPct: 19,
@@ -4962,7 +4966,8 @@ function scrollEventHandler() {
     var data = scrollBehaviour[i];
     var elem = document.querySelector("#".concat(data.id)); // Get the length of this elements path
 
-    var dashLen = elem.getTotalLength(); // Calculate where the current scroll position falls relative to our path
+    var dashLen = elem.getTotalLength();
+    console.log(percentOfScroll); // Calculate where the current scroll position falls relative to our path
 
     var fractionThroughThisElem = (percentOfScroll - data.startPct) / (data.endPct - data.startPct); // Clamp the fraction value to within this path (0 .. 1)
 
@@ -5106,7 +5111,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49994" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57246" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

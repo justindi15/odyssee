@@ -31,9 +31,37 @@ a:hover{
   text-decoration: line-through;
 }
 
-.section, .section-lined {
+.statistic-text {
+  font-size: 20px;
+}
+
+.statistic-percent {
+  font-size: 32px;
+  margin-block-start: 0.50em;
+  margin-block-end: 0.50em;
+}
+
+.section, .section-lined, .escaping-container {
     padding: 0em 2em;
     margin-top: 8em;
+}
+
+.stat-div {
+  margin-bottom: 10em;
+}
+
+.stat-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#stat-section {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 72px;
+  margin-block-end: 0em;
 }
 
 .section-lined {
@@ -160,6 +188,12 @@ ul {
   display: none;
 }
 
+#three-circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #chapters-blob{
   background-color: #055244;
   margin-top: 0em;
@@ -277,6 +311,16 @@ text-decoration: white line-through;
     font-size: 28px;
   }
 
+  .statistic-text {
+    font-size: 24px;
+  }
+  
+  .statistic-percent {
+    font-size: 40px;
+    margin-block-start: 0.50em;
+    margin-block-end: 0.50em;
+  }
+
   .section-lined h1:after{
     display: none;
   }
@@ -287,6 +331,78 @@ text-decoration: white line-through;
       height: 100vh;
       flex-direction: column;
       margin: 0em;
+  }
+
+  #bringin-section {
+    min-width: 650px;
+    padding-right: 0;
+  }
+
+  #three-circles {
+    margin-left: 8em;
+    margin-right: 8em;
+  }
+
+  .escaping-container {
+    display: flex; 
+    align-items: center; 
+    flex-direction: row; 
+    position: relative; 
+    justify-content: flex-end;
+    min-width: 2000px;
+  }
+
+  .escaping-div {
+    justify-content: center; 
+    width: 900px;
+    margin-right: 300px;
+  }
+
+  #methodology {
+    min-width: 1800px;
+    align-items: center;
+    position: relative;
+  }
+
+  #methodology-div {
+    width: 900px;
+  }
+
+  #methodology-line {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .stat-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .stat-div {
+    margin-left: 8em;
+    margin-right: 8em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #stat-section {
+    justify-content: flex-start;
+    min-width: 2695px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #stat-line {
+    height: auto;
+  }
+
+  #marginLeftDesktop {
+    margin-left: 30em;
+  }
+
+  #marginRightDesktop {
+    margin-right: 8em;
   }
 
   .section-lined h3 {
