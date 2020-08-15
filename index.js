@@ -27,31 +27,31 @@ ScrollReveal().clean(document.querySelectorAll('#chapters-blob h1,#chapters-blob
 ScrollReveal().clean(document.querySelectorAll('.footer h1,.footer h2,.footer h3,.footer p'))
 
 const scrollBehaviour = [
-    {id: 'path-1', startPct: 1, endPct: 8},
-    {id: 'path-2a', startPct: 4, endPct: 8},
-    {id: 'path-2b', startPct: 13, endPct: 19},
-    {id: 'path-activity-1', startPct: 19, endPct: 21},
-    {id: 'path-activity-2', startPct: 18, endPct: 19},
-    {id: 'path-3', startPct: 22, endPct: 24},
-    {id: 'path-4', startPct: 24, endPct: 26},
-    {id: 'path-5', startPct: 27, endPct: 29},
-    {id: 'path-6', startPct: 31, endPct: 34},
-    {id: 'path-7', startPct: 36, endPct: 38},
-    {id: 'path-time-1', startPct: 41, endPct: 45},
-    {id: 'path-time-2', startPct: 45, endPct: 46},
-    {id: 'path-8', startPct: 47, endPct: 48},
-    {id: 'path-9', startPct: 50, endPct: 53},
-    {id: 'path-mood-1', startPct: 59, endPct: 60},
-    {id: 'path-mood-2', startPct: 56, endPct: 59},
-    {id: 'path-10', startPct: 60, endPct: 62},
-    {id: 'path-11', startPct: 64, endPct: 68},
-    {id: 'path-12', startPct: 70, endPct: 72},
-    {id: 'path-attitude-1', startPct: 73, endPct: 74},
-    {id: 'path-attitude-2', startPct: 74, endPct: 78},
-    {id: 'path-13', startPct: 81, endPct: 84},
-    {id: 'path-14', startPct: 87, endPct: 88},
-    {id: 'path-ending-note-1', startPct: 88, endPct: 91},
-    {id: 'path-ending-note-2', startPct: 93, endPct: 95},
+    {id: 'path-1', startPct: 1, endPct: 6},
+    {id: 'path-2a', startPct: 7, endPct: 12},
+    {id: 'path-2b', startPct: 14, endPct: 24},
+    {id: 'path-activity-1', startPct: 27, endPct: 29},
+    {id: 'path-activity-2', startPct: 26, endPct: 28},
+    {id: 'path-3', startPct: 30, endPct: 32},
+    {id: 'path-4', startPct: 32, endPct: 34},
+    {id: 'path-5', startPct: 35, endPct: 37},
+    {id: 'path-6', startPct: 39, endPct: 42},
+    {id: 'path-7', startPct: 44, endPct: 46},
+    {id: 'path-time-1', startPct: 48, endPct: 51},
+    {id: 'path-time-2', startPct: 51, endPct: 52},
+    {id: 'path-8', startPct: 53, endPct: 54},
+    {id: 'path-9', startPct: 56, endPct: 58},
+    {id: 'path-mood-1', startPct: 63, endPct: 64},
+    {id: 'path-mood-2', startPct: 60.5, endPct: 63},
+    {id: 'path-10', startPct: 65, endPct: 67},
+    {id: 'path-11', startPct: 68, endPct: 71},
+    {id: 'path-12', startPct: 74, endPct: 76},
+    {id: 'path-attitude-1', startPct: 76, endPct: 77},
+    {id: 'path-attitude-2', startPct: 77, endPct: 81},
+    {id: 'path-13', startPct: 83, endPct: 85},
+    {id: 'path-14', startPct: 88, endPct: 88.5},
+    {id: 'path-ending-note-1', startPct: 88.5, endPct: 90.5},
+    {id: 'path-ending-note-2', startPct: 92.5, endPct: 94.5},
  ];
 
  window.addEventListener("DOMContentLoaded", (event) => {
@@ -90,12 +90,14 @@ function scrollEventHandler()
     smooth scrolling links in chapters blob
 */
 
+
+
 window.addEventListener(
     'DOMContentLoaded',
     () => {
       const scroller = new SweetScroll({
-        vertical: false,
-        horizontal: true,
+        vertical: (window.innerWidth > 768) ? false : true,
+        horizontal: (window.innerWidth > 768) ? true : false,
         easing: 'easeInOutCubic',
       });
     }
@@ -148,9 +150,12 @@ var moodOffset = mood.offsetLeft;
 var attitude = document.getElementById("attitude-div");
 var attitudeOffset = attitude.offsetLeft;
 
+var ending_note_right_line = document.getElementById("ending-note-right-line")
+var ending_note_right_lineOffset = ending_note_right_line.offsetLeft;
+
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function handleStickyNavDisplay() {
-  if (window.pageXOffset >= activityOffset) {
+  if ((window.pageXOffset >= activityOffset) && (window.pageXOffset < ending_note_right_lineOffset)) {
     stickyNav.style.visibility = "visible"
   } else {
     stickyNav.style.visibility = "hidden"
@@ -189,7 +194,7 @@ function highlightCurrentSection() {
         document.getElementById("mood-dot").style.backgroundColor = "#484848"
         document.getElementById("sticky-nav-mood-label").style.visibility = "visible"
       }else{
-        if(offset >= attitudeOffset){
+        if(offset >= attitudeOffset && window.pageXOffset < ending_note_right_lineOffset){
           document.getElementById("attitude-dot").style.backgroundColor = "#484848"
           document.getElementById("sticky-nav-attitude-label").style.visibility = "visible"
         }

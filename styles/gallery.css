@@ -228,6 +228,16 @@ text-decoration: white line-through;
   display: none;
 }
 
+.member-name {
+  padding-top: 0.5em;
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 @media (min-width: 768px) {
   body {
     flex-direction: row;
@@ -339,8 +349,8 @@ text-decoration: white line-through;
   }
 
   #three-circles {
-    margin-left: 8em;
-    margin-right: 8em;
+    margin-left: 6em;
+    margin-right: 3em;
   }
 
   .escaping-container {
@@ -355,13 +365,14 @@ text-decoration: white line-through;
   .escaping-div {
     justify-content: center; 
     width: 900px;
-    margin-right: 300px;
+    margin-right: 200px;
   }
 
   #methodology {
     min-width: 1800px;
     align-items: center;
     position: relative;
+    margin-right: 4em;
   }
 
   #methodology-div {
@@ -624,8 +635,7 @@ text-decoration: white line-through;
   }
 
   #time-div {
-    width: 600px;
-    padding-right: 100px;
+    width: 1200px;
   }
 
   #mood {
@@ -634,7 +644,7 @@ text-decoration: white line-through;
   }
 
   #mood-div {
-    width: 600px;
+    width: 800px;
   }
 
   #attitude {
@@ -644,7 +654,7 @@ text-decoration: white line-through;
   }
 
   #attitude-div {
-    width: 600px;
+    width: 1000px;
   }
 
   #end {

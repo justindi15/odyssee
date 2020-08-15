@@ -60,7 +60,7 @@
 
   <div class="section" id="three-circles">
     <img src='images/3-circles-mobile.png' class="blob-mobile">
-    <img src='images/3-circles-web.png' class="blob-desktop">
+    <img src='images/3-circles-web.png' style="width: 100%;" class="blob-desktop">
   </div>
 
   <div class="section" style="justify-content: center;" id="methodology">
@@ -132,8 +132,12 @@
       </div>
   
       <div class="stat-div">
-        <h2 class="stat-number">21</h2>
-        <h2>countries</h2>
+        <h2 class="stat-number">12</h2>
+        <h2>cities</h2>
+      </div>
+
+      <div class="stat-div">
+        <img src="images/cities.gif" height="200px"/>
       </div>
   
       <div class="stat-div">
@@ -401,7 +405,10 @@
     <div id="time-div">
       <h1 id="time-anchor" style="transform: translateX(-300px);" ></h1>
       <h1>Time</h1>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+      <h3>Participants recorded their experiences - their activities<br>
+          and feelings - every day for 30 days during the pandemic<br>
+          at varying frequencies: 4x, 8x, or 16x a day.
+      </h3>
     </div>
     <div id="time-2" class="line">
       <svg width="1672" height="302" viewBox="0 0 1672 302" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -444,7 +451,8 @@
     </div>
     <div id="mood-div">
       <h1>Mood</h1>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+      <h3>We asked participants to reflect on how they<br>were feeling at random moments of the day.</h3>
+      <h3 style="font-style: italic;">Prompt: How are you feeling?</h3>
     </div>
     <div class="line">
       <svg width="1347" height="570" viewBox="0 0 1347 570" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -495,7 +503,8 @@
     </div>
     <div id="attitude-div">
       <h1>Attitude</h1>
-      <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+      <h3>Typically, with every thing we do, we have a motivation<br>behind it — a desire, an obligation, or a blend of both.</h3>
+      <h3 style="font-style: italic;">Prompt: I am doing this activity because...</h3>
     </div>
     <div class="line">
       <svg width="1573" height="362" viewBox="0 0 1573 362" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -543,7 +552,7 @@
         <h2>ENDING NOTE</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien augue tempus, hendrerit massa gravida euismod ut. Eu orci faucibus cursus tincidunt velit ut.</p>
       </div>
-      <div class="line">
+      <div class="line" id="ending-note-right-line">
         <svg width="390" height="1153" viewBox="0 0 390 1153" fill="none" xmlns="http://www.w3.org/2000/svg">
           <g clip-path="url(#clip0)">
           <path id="path-ending-note-2" d="M207.886 -71.7422C207.886 35.3778 114.238 31.093 37.3136 129.643C-39.6112 228.194 23.9353 378.161 87.4819 421.009C151.028 463.857 268.088 421.009 304.878 326.744C341.668 232.478 291.5 142.498 261.399 112.504C231.298 82.5105 324.945 343.884 355.046 331.029C385.147 318.174 398.525 245.333 378.458 232.478C358.391 219.623 334.979 262.472 334.979 412.44C334.979 562.408 351.702 755.224 334.979 789.503C328.29 802.356 258.054 806.641 224.609 875.198C207.886 905.192 211.23 1170.85 211.23 1196.56" stroke="#484848" stroke-width="3" stroke-miterlimit="10"/>
@@ -559,14 +568,34 @@
     <div class="section" id="team-section">
       <h1 style="white-space: nowrap;" >The Team</h1>
       <div class="grid-container">
-        <img class="team-member" src="./images/portraits/Jamal.svg">
-        <img class="team-member" src="./images/portraits/Josh.svg">
-        <img class="team-member" src="./images/portraits/Justin.svg">
-        <img class="team-member" src="./images/portraits/Pia.svg">
-        <img class="team-member" src="./images/portraits/Victor.svg">
-        <img class="team-member" src="./images/portraits/Lesley.svg">
-        <img class="team-member" src="./images/portraits/Yanlam.svg">
-        <img class="team-member" src="./images/portraits/Jamal.svg">
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Jamal.svg">
+          <div class="member-name"><span>Jamal Hashim</span></div>
+        </div>
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Josh.svg">
+          <div class="member-name"><span>Josh Di</span></div>
+        </div>
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Justin.svg">
+          <div class="member-name"><span>Justin Di</span></div>
+        </div>
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Pia.svg">
+          <div class="member-name"><span>Pia Bocanegra</span></div>
+        </div>
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Victor.svg">
+          <div class="member-name"><span>Victor Odouard</span></div>
+        </div>
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Lesley.svg">
+          <div class="member-name"><span>Lesley Huang</span></div>
+        </div>
+        <div style="flex-direction: column; justify-content: center;">
+          <img class="team-member" src="./images/portraits/Yanlam.svg">
+          <div class="member-name"><span>Yanlam Ko</span></div>
+        </div>
       </div>
     </div>
 
