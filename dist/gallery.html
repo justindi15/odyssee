@@ -8,25 +8,25 @@
     <link rel="stylesheet" type="text/css" href="/gallery.ae5786b7.css" media="all">
     <link rel="stylesheet" href="https://use.typekit.net/qep5qwj.css">
     <link rel="icon" type="image/png" href="/icon.82bf699d.png">
-    <!-- <script src="https://d3js.org/d3.v5.min.js"></script>
-    <script src="https://d3js.org/d3-drag.v1.min.js"></script> -->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-drag.v1.min.js"></script>
     <script src="/javascript.a9e043f0.js"></script>
-    <script type="text/javascript" src="/gallery.b5caea92.js"></script>
-    <!-- <script type="text/javascript" src="javascript/helper.js"></script>
-    <script type="text/javascript" src="javascript/general.js"></script>
-    <script type="text/javascript" src="javascript/indActFlowerGraph.js"></script>
-    <script type="text/javascript" src="javascript/MoodByActivityVis.js"></script>
-    <script type="text/javascript" src="javascript/MoodByActivityBursts.js"></script>
-    <script type="text/javascript" src="javascript/stressorRadialGraph.js"></script>
-    <script type="text/javascript" src="javascript/happinessDotPlot.js"></script>
-    <script type="text/javascript" src="javascript/balanceVis.js"></script>
-    <script type="text/javascript" src="javascript/depthBreadthVis.js"></script>
-    <script type="text/javascript" src="javascript/ikigaiVis.js"></script>
-    <script type="text/javascript" src="javascript/morningNightVis.js"></script>
-    <script type="text/javascript" src="javascript/thirtyDays.js"></script>
-    <script type="text/javascript" src="javascript/intuitorsVis.js"></script>
-    <script type="text/javascript" src="javascript/occupationActivityVis.js"></script>
-    <script type="text/javascript" src="javascript/values.js"></script> -->
+    <!-- <script type="text/javascript" src="javascript/gallery.js"></script> -->
+    <script type="text/javascript" src="/helper.4f17da5c.js"></script>
+    <script type="text/javascript" src="/general.f9bff259.js"></script>
+    <script type="text/javascript" src="/indActFlowerGraph.243dfccd.js"></script>
+    <script type="text/javascript" src="/MoodByActivityVis.89f53f58.js"></script>
+    <script type="text/javascript" src="/MoodByActivityBursts.693d37f0.js"></script>
+    <script type="text/javascript" src="/stressorRadialGraph.aff5c1ef.js"></script>
+    <script type="text/javascript" src="/happinessDotPlot.5c085de9.js"></script>
+    <script type="text/javascript" src="/balanceVis.ddb7a579.js"></script>
+    <script type="text/javascript" src="/depthBreadthVis.00ced6b4.js"></script>
+    <script type="text/javascript" src="/ikigaiVis.ead075d8.js"></script>
+    <script type="text/javascript" src="/morningNightVis.49caf3ef.js"></script>
+    <script type="text/javascript" src="/thirtyDays.ee166bda.js"></script>
+    <script type="text/javascript" src="/intuitorsVis.a7536062.js"></script>
+    <script type="text/javascript" src="/occupationActivityVis.65792f04.js"></script>
+    <script type="text/javascript" src="/values.167c462b.js"></script>
 <script src="/gallery.ae5786b7.js"></script><script src="/about.js"></script></head>
 
 <body>
@@ -698,6 +698,260 @@
                 share this data with third parties. The visualizations we will create will not reveal your identity.</p>
         </div>
     </div>
+    <script>function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var data;
+var email = "lh484@cornell.edu"; //hardcoded
+
+var personData = [];
+var width = 1000;
+var height = 700;
+var padding = 50;
+var numIcons = 6;
+var textColor = "#484848";
+var greyColor = "#bbbbbb";
+var backgroundColor = "#fff8eb";
+var iconWidth = 70;
+var attitudeList = ["want to", "have to", "both", "neither"];
+var categories = ["relationships", "health", "work", "logistical"];
+var dashArray2 = ["0.25 7", "5 7", "0.25 7 5 7", "1000"];
+var moodList = ["Awful", "Bad", "Ok", "Good", "Amazing"];
+var negativeMoods = ["Awful", "Bad"];
+var ikigaiGroups = ['zen master', 'bohemian', 'worker', 'profiteer'];
+var dashArray = {
+  "I want to": "0.25 5",
+  "I have to": "5 5",
+  "I want to and have to": "0.25 5 5 5",
+  "of something else; I neither want to nor have to": "1000"
+};
+var activityShortToLong = {}; // Configured later using everyoneData.
+
+var attitudeLongtoShort = {
+  "I want to": "want to",
+  "I have to": "have to",
+  "I want to and have to": "both",
+  "of something else; I neither want to nor have to": "neither"
+};
+var attitudeShorttoLong = {
+  "want to": "I want to",
+  "have to": "I have to",
+  "both": "I want to and have to",
+  "neither": "of something else; I neither want to nor have to"
+};
+var colorHexArray = {
+  "Awful": "#9f265b",
+  "Bad": "#ca614d",
+  "Ok": "#edc3a3",
+  "Good": "#f2d878",
+  "Amazing": "#ffc500",
+  "Morning": "#F0B254",
+  "Night": "#191760"
+};
+var categoryShortToLongMap = {
+  "work": "Work/School",
+  "health": "Health & well-being",
+  "relationships": "Relationships",
+  "logistical": "Logistical"
+};
+var balanceLongToShort = {
+  "Yes, but I'm trying to be more focused on one aspect of my life": "yes unhappy",
+  "No, but I'm trying to be more balanced": "no unhappy",
+  "Yes, I'm happy with that": "yes happy",
+  "No, but I'm happy with that": "no happy"
+};
+var balanceShortToLong1 = {
+  "yes unhappy": "Yes, but I'm trying",
+  "no unhappy": "No, but I'm trying",
+  "yes happy": "Yes, I'm happy",
+  "no happy": "No, but I'm "
+};
+var balanceShortToLong2 = {
+  "yes unhappy": "to be more focused",
+  "no unhappy": "to be more balanced",
+  "yes happy": "with it",
+  "no happy": "happy with it"
+};
+var moodToScore = {
+  "Awful": 1,
+  "Bad": 2,
+  "Ok": 3,
+  "Good": 4,
+  "Amazing": 5
+};
+var scoreToMood = {
+  1: "Awful",
+  2: "Bad",
+  3: "Ok",
+  4: "Good",
+  5: "Amazing"
+};
+var ikigaiKeyToLabel = {
+  "worker": "Citizen",
+  "bohemian": "Bohemian",
+  "zen master": "Zen Master",
+  "profiteer": "Profiteer"
+};
+var ikigaiColorHexArray = {
+  "profiteer": "#9f265b",
+  "worker": "#ca614d",
+  "bohemian": "#edc3a3",
+  "zen master": "#f2d878"
+}; // morning (5am - 11:59 am), afternoon (12:00pm - 4:59pm), evening (5:00pm - 8:59pm), night (9:00pm - 4:59am).
+
+var timeSegments = {
+  morning: {
+    title: "Morning",
+    start: 0,
+    end: 6,
+    image: "5am_5pm"
+  },
+  afternoon: {
+    title: "Afternoon",
+    start: 7,
+    end: 11,
+    image: "12pm"
+  },
+  evening: {
+    title: "Evening",
+    start: 12,
+    end: 15,
+    image: "5am_5pm"
+  },
+  night: {
+    title: "Night",
+    start: 16,
+    end: 23,
+    image: "9pm"
+  }
+};
+var keys = {
+  personality: {
+    shortTermStressor: "Which of the following daily stressors is most significant for you?",
+    longTermStressor: "Which of the following long-term stressors is most significant for you?",
+    email: "What's your email?",
+    happiness: "I am generally happy with my life. "
+  },
+  everyone: {
+    email: "Email",
+    mood: "Feeling",
+    attitude: "Reason",
+    activity: "Activity"
+  },
+  ikigai: {
+    email: "Email",
+    contribution: "Contribution",
+    happiness: "Happiness",
+    category: "Ikigai ",
+    money: "Money",
+    passion: "Passion",
+    skill: "Skill"
+  },
+  time: {
+    dateTime: "Time of Record (Adjusted to Time Zone)",
+    mood: "How are you feeling?",
+    morningNight: "Morning/Evening Person",
+    attitude: "I was doing this activity because",
+    activity: "In the last 10 min, what kind of activity were you doing?",
+    email: "Email"
+  },
+  types: {
+    occupation: "Time",
+    email: "What's your email?",
+    value: "Values",
+    personality: "Personality"
+  }
+};
+var occupationLongtoShort = {
+  "Working for a company": "Company",
+  "Working for my own venture": "Venture",
+  "Looking for jobs": "Looking",
+  "Studying": "Studying",
+  "Caring for family and friends": "Caring",
+  "Exploring and enjoying life": "Exploring",
+  "Other": "Other"
+};
+
+var getData = /*#__PURE__*/function () {
+  var _ref = _asyncToGenerator( /*#__PURE__*/regeneratorRuntime.mark(function _callee() {
+    var everyoneData, personData3, categoryMap, categoryFullMap, categoryMap2, categoryFullMap3, personalityData, ikigaiData, timeData, mbtiData;
+    return regeneratorRuntime.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _context.next = 2;
+            return d3.csv("odyssee_data.csv");
+
+          case 2:
+            everyoneData = _context.sent;
+            personData3 = getPersonData(everyoneData, email);
+            everyoneData.forEach(function (e) {
+              var activity = e["Activity"];
+              activityShortToLong[activity.split(":")[0]] = activity.split(":")[1].substring(1).split("(")[0];
+            });
+            categoryMap = getFrequencyByKey("Activity", personData3);
+            categoryFullMap = getFrequencyByKey("Activity", personData3, 1);
+            drawMoodByActvitiy(".indTwoWeeks", categoryMap, categoryFullMap, "Your last 2 weeks", personData3);
+            categoryMap2 = getFrequencyByKey("Activity", everyoneData);
+            categoryFullMap3 = getFrequencyByKey("Activity", everyoneData, 1);
+            drawMoodByActvitiy(".aggTwoWeeks", categoryMap2, categoryFullMap3, "Everyone's last 2 weeks", everyoneData);
+            drawMoodByActivityBursts(".indBursts", categoryMap2, categoryFullMap3, everyoneData, "Mood by Activity");
+            drawIndActivityFlower(".indActFlower", "Activity", personData3);
+            _context.next = 15;
+            return d3.csv("personality.csv");
+
+          case 15:
+            personalityData = _context.sent;
+            drawStressorRadialGraph(".stressorRadial", everyoneData, personalityData, email);
+            drawBalanceGraph(".balance", everyoneData, personalityData);
+            drawHappinessDotPlot(".happinessDotPlot", everyoneData, personalityData, email);
+            drawDepthBreadthPlot(".depthBreadth", everyoneData, personalityData);
+            _context.next = 22;
+            return d3.csv("ikigai.csv");
+
+          case 22:
+            ikigaiData = _context.sent;
+            drawIkigaiVis(".ikigaiVis", ikigaiData, email);
+            _context.next = 26;
+            return d3.csv("time.csv");
+
+          case 26:
+            timeData = _context.sent;
+            drawMorningNightVis(".morningNightVis", timeData, email);
+            drawThirtyDaysVis(".thirtyDays", timeData);
+            drawThirtyDaysVis(".thirtyDaysInd", timeData, email);
+            _context.next = 32;
+            return d3.csv("types.csv");
+
+          case 32:
+            mbtiData = _context.sent;
+            drawIntuitorsVis(".intuitorsVis", everyoneData, personalityData, mbtiData);
+            drawFeelerThinkerVis(".feelerThinkerVis", everyoneData, personalityData, mbtiData);
+            drawObserverVis(".observerVis", everyoneData, personalityData, mbtiData);
+            drawPersonalityKey(".personalityKey");
+            drawOccupationVis(".occupationActivityVis", ikigaiData, mbtiData, everyoneData, email);
+            drawValuesVis(".valuesVis", ikigaiData, mbtiData, everyoneData, email);
+
+          case 39:
+          case "end":
+            return _context.stop();
+        }
+      }
+    }, _callee);
+  }));
+
+  return function getData() {
+    return _ref.apply(this, arguments);
+  };
+}();
+
+function main() {
+  setUpFilters(".indTwoWeeks");
+  getData();
+}
+
+main();</script>
 </body>
 
 </html>
