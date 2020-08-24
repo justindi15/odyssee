@@ -126,6 +126,10 @@ ul {
   padding: 0;
 }
 
+.end-section-text {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .activity-type-icon {
     display: block;
     margin: 0em auto;
@@ -238,9 +242,48 @@ text-decoration: white line-through;
   font-family: 'Courier New', Courier, monospace;
 }
 
+.only-mobile {
+  display: block;
+}
+
+.only-desktop {
+  display: none;
+}
+
+.social-media-div {
+  display: flex;
+}
+
+.social-media-icon {
+  margin-right: 0.5em;
+}
+
+.team-member-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#end {
+  padding-right: 0;
+}
+
+#end p, #end h1, #end div{
+  padding-right: 2em;
+}
+
 @media (min-width: 768px) {
   body {
     flex-direction: row;
+  }
+
+  .only-mobile {
+    display: none;
+  }
+
+  .only-desktop {
+    display: block;
   }
 
   .header {
@@ -248,7 +291,11 @@ text-decoration: white line-through;
     position: fixed;
     z-index: 999;
     padding: 0em;
-    display: none;
+    border-bottom: none;
+  }
+
+  .header a{
+    padding-right: 2em;
   }
 
   #sticky-nav{
@@ -366,6 +413,7 @@ text-decoration: white line-through;
     justify-content: center; 
     width: 900px;
     margin-right: 200px;
+    padding-bottom: 3em;
   }
 
   #methodology {
@@ -480,7 +528,7 @@ text-decoration: white line-through;
   }
 
   .footer p {
-    width: 50%;
+    width: 70%;
   }
 
   .blob-desktop {
@@ -659,6 +707,13 @@ text-decoration: white line-through;
 
   #end {
     justify-content: center;
+    min-width: 700px;
+    margin-left: 4em;
+    padding-right: 0;
+  }
+
+  #end p, #end h1, #end div{
+    padding-right: 0em;
   }
 
   #activity-1 {

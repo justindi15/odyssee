@@ -14,7 +14,7 @@
 
   <div class="header">
     <ul>
-      <li style="float:right"><a href="about.html">ABOUT</a></li>
+      <li style="float:right"><a href="home.html">Close</a></li>
     </ul>
   </div>
 
@@ -52,6 +52,7 @@
     </div>
     
     <div class="escaping-div">
+      <img style="width: 10em;" src="./images/title.svg" />
       <h2>ESCAPING THE TUNNEL</h2>
       <p>Especially in these monotone times, it’s too easy for us to feel as if our world is constricted, and our experiences unvarying—as if we are driving through a tunnel. In March, we created odyssee to escape that tunnel.</p>
       <p>We started odyssee with a social challenge—50 people were asked to record their experiences, their activities and feelings for 30 days.</p>
@@ -59,7 +60,7 @@
   </div>
 
   <div class="section" id="three-circles">
-    <img src='images/3-circles-mobile.png' class="blob-mobile">
+    <img src='images/3-circles-mobile.svg' style="width: 80%;" class="blob-mobile">
     <img src='images/3-circles-web.png' style="width: 100%;" class="blob-desktop">
   </div>
 
@@ -84,7 +85,7 @@
   </div>
 
   <div class="section" style="justify-content: center;">
-    <p>odyssee’s 1-month challenge took place in April 2020, an unprecedented time of self-isolation and reflection. Participants across the world were collectively experiencing the same reality in similar and different ways.</p>
+    <p>odyssee’s 1-month challenge took place in April 2020, an unprecedented time of self-isolation and reflection. Participants across the world were collectively experiencing reality in similar and different ways.</p>
     <h2>WHY DID PEOPLE PARTICIPATE?</h2>
     <table>
       <tr>
@@ -154,7 +155,8 @@
     <h1>The Data</h1>
     <ul>
       <li><a href="#activity" data-scroll><h2>01 Activity</h2></a></li>
-      <li><a href="#time-anchor" data-scroll><h2>02 Time</h2></a></li>
+      <li class="only-desktop"><a href="#time-anchor" data-scroll><h2>02 Time</h2></a></li>
+      <li class="only-mobile"><a href="#time-div" data-scroll><h2>02 Time</h2></a></li>
       <li><a href="#mood" data-scroll><h2>03 Mood</h2></a></li>
       <li><a href="#attitude" data-scroll><h2>04 Attitude</h2></a></li>
     </ul>
@@ -550,7 +552,7 @@
     </div>
       <div class="ending-note">
         <h2>ENDING NOTE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sapien augue tempus, hendrerit massa gravida euismod ut. Eu orci faucibus cursus tincidunt velit ut.</p>
+        <p>Whether you participated in the 30-day challenge or stumbled upon odyssee, we hope that you learned something new from a month’s worth of evanescent details. By weaving everyone’s recorded experiences into aggregate visualizations, we spark dialogue that connects us back to the wider world.</p>
       </div>
       <div class="line" id="ending-note-right-line">
         <svg width="390" height="1153" viewBox="0 0 390 1153" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -568,31 +570,31 @@
     <div class="section" id="team-section">
       <h1 style="white-space: nowrap;" >The Team</h1>
       <div class="grid-container">
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Jamal.svg">
           <div class="member-name"><span>Jamal Hashim</span></div>
         </div>
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Josh.svg">
           <div class="member-name"><span>Josh Di</span></div>
         </div>
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Justin.svg">
           <div class="member-name"><span>Justin Di</span></div>
         </div>
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Pia.svg">
           <div class="member-name"><span>Pia Bocanegra</span></div>
         </div>
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Victor.svg">
           <div class="member-name"><span>Victor Odouard</span></div>
         </div>
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Lesley.svg">
           <div class="member-name"><span>Lesley Huang</span></div>
         </div>
-        <div style="flex-direction: column; justify-content: center;">
+        <div class="team-member-div">
           <img class="team-member" src="./images/portraits/Yanlam.svg">
           <div class="member-name"><span>Yanlam Ko</span></div>
         </div>
@@ -601,8 +603,14 @@
 
     <div class="section" id="end">
       <h1>Discover</h1>
-      <p>Find out more about<br>shiro.community</p>
-      <p>Drop us a message</p>
+      <img style="width: 100%;" src="./images/lines/Discover line.svg"/>
+      <p class="end-section-text">odyssee is a part of <a style="color: white;" href="https://shiro.community/">shiro’s</a><br>family of projects that encourage<br>reflection and vulnerability.</p>
+      <p class="end-section-text">Drop a message —</p>
+      <div class="social-media-div">
+        <a href="https://www.instagram.com/shiro.community" target="_blank"><img width="48px" class="social-media-icon" height="48px" src="./images/social media icons/Instagram.svg" /></a>
+        <a href="https://www.facebook.com/shiro.space.community" target="_blank"><img width="52px" class="social-media-icon" height="52px"  src="./images/social media icons/Facebook.svg" /></a>
+        <a href="mailto: shiro.space.community@gmail.com" target="_blank"><img height="48px" class="social-media-icon"  src="./images/social media icons/Email.svg" /></a>
+      </div>
 
       <p class="disclaimer-note">We take your privacy seriously, and will only use your data for the creation of visualizations as well as your personal information to contact you if needed. We respect your trust and protect your privacy, and therefore will never sell or share this data with third parties. The visualizations we will create will not reveal your identity.</p>
     </div>
