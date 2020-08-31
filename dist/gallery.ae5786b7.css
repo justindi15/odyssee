@@ -10,7 +10,6 @@ body {
   }
 
 .header {
-  border-bottom: 1px solid #DBD5CA;
   padding: 0 2em;
 }
 
@@ -19,12 +18,13 @@ a:hover{
 }
 
 .header a{
-    font-size: 18px;
+    font-size: 35px;
     display: block;
     color: #484848;
     text-align: center;
     padding: 8px 10px;
     text-decoration: none;
+    font-family: minion-pro-caption, serif;
 }
 
 .header a:hover{
@@ -79,6 +79,10 @@ a:hover{
 
 .ending-note p {
   text-align: center;
+}
+
+.team-member-div a {
+  text-decoration: none;
 }
 
 .section-lined h1:after{
@@ -273,10 +277,37 @@ text-decoration: white line-through;
   padding-right: 2em;
 }
 
+.odyssee-logo {
+  width: 10em
+}
+
+.disclaimer-note {
+  font-size: small;
+  font-style: italic;
+}
+
+.activity-row-label-container {
+  display: none;
+}
+
 @media (min-width: 768px) {
   body {
     flex-direction: row;
   }
+
+  .activity-row-label {
+    font-family: 'Courier New', Courier, monospace;
+  }
+
+  .activity-row-label-container {
+    display: flex;
+    align-items: center;
+    width: 10em
+  }
+
+.odyssee-logo {
+  width: 20em
+}
 
   .only-mobile {
     display: none;
@@ -494,7 +525,7 @@ text-decoration: white line-through;
   }
 
   .ending-note {
-    width: 650px;
+    width: 750px;
     margin: 0 18em;
   }
 
@@ -505,11 +536,6 @@ text-decoration: white line-through;
 
   .activity-label {
     visibility: hidden;
-  }
-
-  .disclaimer-note {
-    font-size: small;
-    font-style: italic;
   }
 
   .footer {
@@ -554,7 +580,7 @@ text-decoration: white line-through;
   .grid-container {
     display: grid;
     column-gap: 2em;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     margin-bottom: 1em;
   }
 
