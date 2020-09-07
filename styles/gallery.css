@@ -9,10 +9,6 @@ body {
     flex-direction: column;
   }
 
-.header {
-  padding: 0 2em;
-}
-
 a:hover{
   cursor: url(../images/cursors/hand.svg), auto;
 }
@@ -25,6 +21,8 @@ a:hover{
     padding: 8px 10px;
     text-decoration: none;
     font-family: minion-pro-caption, serif;
+    margin-right: 30px;
+    margin-top: 30px;
 }
 
 .header a:hover{
@@ -321,12 +319,7 @@ text-decoration: white line-through;
     width: 100%;
     position: fixed;
     z-index: 999;
-    padding: 0em;
     border-bottom: none;
-  }
-
-  .header a{
-    padding-right: 2em;
   }
 
   #sticky-nav{
@@ -444,7 +437,7 @@ text-decoration: white line-through;
     justify-content: center; 
     width: 900px;
     margin-right: 200px;
-    padding-bottom: 3em;
+    padding-bottom: 4em;
   }
 
   #methodology {
