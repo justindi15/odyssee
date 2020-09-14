@@ -27,31 +27,35 @@ ScrollReveal().clean(document.querySelectorAll('#chapters-blob h1,#chapters-blob
 ScrollReveal().clean(document.querySelectorAll('.footer h1,.footer h2,.footer h3,.footer p'))
 
 const scrollBehaviour = [
-    {id: 'path-1', startPct: 1, endPct: 6},
-    {id: 'path-2a', startPct: 7, endPct: 12},
-    {id: 'path-2b', startPct: 14, endPct: 24},
-    {id: 'path-activity-1', startPct: 27, endPct: 29},
-    {id: 'path-activity-2', startPct: 26, endPct: 28},
-    {id: 'path-3', startPct: 30, endPct: 32},
-    {id: 'path-4', startPct: 32, endPct: 34},
-    {id: 'path-5', startPct: 35, endPct: 37},
-    {id: 'path-6', startPct: 39, endPct: 42},
-    {id: 'path-7', startPct: 44, endPct: 46},
+    {id: 'path-1', startPct: 1, endPct: 4},
+    {id: 'path-2a', startPct: 6.5, endPct: 10},
+    {id: 'path-2b', startPct: 13, endPct: 19},
+    {id: 'path-activity-1', startPct: 23.5, endPct: 25},
+    {id: 'path-activity-2', startPct: 23, endPct: 23.5},
+    {id: 'path-3', startPct: 26, endPct: 28},
+    {id: 'path-4', startPct: 28, endPct: 30},
+    {id: 'path-5', startPct: 30, endPct: 32},
+    {id: 'path-6', startPct: 34, endPct: 37},
+    {id: 'path-7', startPct: 38, endPct: 40},
+    {id: 'path-new-1', startPct: 42, endPct: 44},
+    {id: 'path-new-2', startPct: 45, endPct: 47},
     {id: 'path-time-1', startPct: 48, endPct: 51},
     {id: 'path-time-2', startPct: 51, endPct: 52},
-    {id: 'path-8', startPct: 53, endPct: 54},
-    {id: 'path-9', startPct: 56, endPct: 58},
-    {id: 'path-mood-1', startPct: 63, endPct: 64},
-    {id: 'path-mood-2', startPct: 60.5, endPct: 63},
-    {id: 'path-10', startPct: 65, endPct: 67},
-    {id: 'path-11', startPct: 68, endPct: 71},
-    {id: 'path-12', startPct: 74, endPct: 76},
-    {id: 'path-attitude-1', startPct: 76, endPct: 77},
-    {id: 'path-attitude-2', startPct: 77, endPct: 81},
-    {id: 'path-13', startPct: 83, endPct: 85},
-    {id: 'path-14', startPct: 88, endPct: 88.5},
-    {id: 'path-ending-note-1', startPct: 88.5, endPct: 90.5},
-    {id: 'path-ending-note-2', startPct: 92.5, endPct: 94.5},
+    {id: 'path-8', startPct: 52, endPct: 54},
+    {id: 'path-9', startPct: 54.5, endPct: 56},
+    {id: 'path-mood-1', startPct: 62, endPct: 63},
+    {id: 'path-mood-2', startPct: 59, endPct: 62},
+    {id: 'path-10', startPct: 63, endPct: 64},
+    {id: 'path-11', startPct: 66, endPct: 68},
+    {id: 'path-new-3', startPct: 70.5, endPct: 72.5},
+    {id: 'path-new-4', startPct: 74.25, endPct: 76},
+    {id: 'path-12', startPct: 77.7, endPct: 80},
+    {id: 'path-attitude-1', startPct: 80, endPct: 81},
+    {id: 'path-attitude-2', startPct: 81, endPct: 84},
+    {id: 'path-13', startPct: 85, endPct: 88},
+    {id: 'path-14', startPct: 89.5, endPct: 90},
+    {id: 'path-ending-note-1', startPct: 90.5, endPct: 93},
+    {id: 'path-ending-note-2', startPct: 93.5, endPct: 95.5},
  ];
 
  window.addEventListener("DOMContentLoaded", (event) => {
@@ -71,6 +75,7 @@ function scrollEventHandler()
    var elem = document.querySelector(`#${data.id}`);
 
    // Get the length of this elements path
+   console.log(data.id)
    var dashLen = elem.getTotalLength();
     console.log(percentOfScroll)
    // Calculate where the current scroll position falls relative to our path

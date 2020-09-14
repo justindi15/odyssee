@@ -288,13 +288,23 @@ text-decoration: white line-through;
   display: none;
 }
 
+.activity-grid-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.activity-row-label {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 @media (min-width: 768px) {
-  body {
-    flex-direction: row;
+  .activity-grid-title {
+    display: none;
   }
 
-  .activity-row-label {
-    font-family: 'Courier New', Courier, monospace;
+  body {
+    flex-direction: row;
   }
 
   .activity-row-label-container {
