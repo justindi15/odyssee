@@ -122,7 +122,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\cursors\\pointer.svg":[["pointer.00892dcf.svg","images/cursors/pointer.svg"],"images/cursors/pointer.svg"],"./..\\images\\cursors\\hand.svg":[["hand.109d7cbf.svg","images/cursors/hand.svg"],"images/cursors/hand.svg"],"./..\\images\\lines\\Oval.svg":[["Oval.0a220762.svg","images/lines/Oval.svg"],"images/lines/Oval.svg"],"./..\\images\\lines\\line 1.svg":[["line 1.6073f802.svg","images/lines/line 1.svg"],"images/lines/line 1.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../images/cursors/pointer.svg":[["pointer.00892dcf.svg","images/cursors/pointer.svg"],"images/cursors/pointer.svg"],"./../images/cursors/hand.svg":[["hand.109d7cbf.svg","images/cursors/hand.svg"],"images/cursors/hand.svg"],"./../images/lines/Oval.svg":[["Oval.0a220762.svg","images/lines/Oval.svg"],"images/lines/Oval.svg"],"./../images/lines/line 1.svg":[["line 1.6073f802.svg","images/lines/line 1.svg"],"images/lines/line 1.svg"],"_css_loader":"node_modules/parcel-bundler/src/builtins/css-loader.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -150,7 +150,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54147" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60943" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -10,24 +10,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 
-<ul>
+<ul style="padding-left: 30px; padding-right: 30px">
 <li style="float:right"><a href="about.html">About</a></li>
 </ul>
 
 <style>
-html {
-  background: url('images/background.svg') #FFF8EB no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.background-shape{
+    display: block;
+    position: absolute;
+    width: 20%
 }
 
 @media (max-width: 768px) {
-  html {
-    background-image: url('images/mobile_background.svg');
+  .background-shape {
+    width: 40%
   }
 }
+
 </style>
 
 <body>
@@ -35,7 +41,10 @@ html {
     <img id="odyssee" alt="odyssee" src="images/logo.png" />
     <br>
     <a class="exploring_button" href="gallery.html">START EXPLORING</a>
-
+    <img class="background-shape" style="top: 0; left: 0" src="images/shape3.svg"/>
+    <img class="background-shape" style="top: 0; right: 0" src="images/shape4.svg"/>
+    <img class="background-shape" style="bottom: 0; left: 0;" src="images/shape2.svg"/>
+    <img class="background-shape" style="bottom: 0; right: 0;" src="images/shape1.svg"/>
 
 </body>
 

@@ -1,21 +1,21 @@
-
 body {
-  font-family: minion-pro-caption,serif;
+  font-family: minion-pro-caption, serif;
   font-weight: 400;
   font-style: normal;
   color: #484848;
   font-size: 35px;
   text-align: left;
-  margin: 30px;
+  background: #FFF8EB;
+  margin: 0;
 }
 
 #titleText {
   width: 800px;
   margin: 0 auto;
   font-size: 35px;
-  font-family: minion-pro-caption,serif;
+  font-family: minion-pro-caption, serif;
   font-weight: 400;
-  font-style: italic;
+
 }
 
 #content {
@@ -24,11 +24,10 @@ body {
 }
 
 h4 {
-  font-size: 35px;
+  font-size: 25px;
   color: #484848;
-  font-family: minion-pro-caption,serif;
+  font-family: Courier New;
   font-weight: 400;
-  font-style: italic;
 }
 
 #text {
@@ -41,14 +40,14 @@ h4 {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 15%;
 }
 
 #reflection {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 30%;
+  width: 15%;
 }
 
 #vulnerability {
@@ -63,7 +62,6 @@ ul {
   margin: 0;
   padding: 0;
 }
-
 
 li a {
   display: block;
@@ -81,16 +79,16 @@ li a:hover {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 35%;
 }
 
 .exploring_button {
-font-family: 'Courier new';
-display: block;
-color: #484848;
-text-align: center;
-padding: 8px 10px;
-text-decoration: none;
+  font-family: 'Courier new';
+  display: block;
+  color: #484848;
+  text-align: center;
+  padding: 8px 10px;
+  text-decoration: none;
 }
 
 .exploring_button:hover {
@@ -102,7 +100,8 @@ text-decoration: none;
 }
 
 .container__inner {
-  display: table-cell; vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 #slogan {
@@ -136,10 +135,14 @@ text-decoration: none;
 }
 
 #shiro-logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.icongrey {
+  fill: greyColor;
 }
 
 
